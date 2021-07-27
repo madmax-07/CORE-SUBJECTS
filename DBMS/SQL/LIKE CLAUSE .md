@@ -29,3 +29,8 @@ select  CITY, LENGTH(city) from station
 order by length(city) asc, City ASC
 limit 1;
 ```
+Q3. Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345 . Truncate your answer to 4  decimal places.
+```SQL
+select ROUND(max(LAT_N),4) from station where LAT_N IN
+(select (LAT_N) from station where LAT_N<137.2345);
+```
