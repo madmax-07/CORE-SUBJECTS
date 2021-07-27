@@ -14,3 +14,8 @@ select distinct city
 from station 
 where city not rlike '^[aeiou]' and city not rlike '[aeiou]$';
 ```
+MySQL RLIKE operator performs a pattern match of a string expression against a pattern. The pattern is supplied as an argument.
+* ^	caret(^) : matches Beginning of string
+* $	End of string
+* [abc]	Any character listed between the square brackets
+
