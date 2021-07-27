@@ -34,3 +34,8 @@ Q3. Query the greatest value of the Northern Latitudes (LAT_N) from STATION that
 select ROUND(max(LAT_N),4) from station where LAT_N IN
 (select (LAT_N) from station where LAT_N<137.2345);
 ```
+Q4.Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+
+```sql
+SELECT ROUND(LONG_W,4) from station where LAT_N=(select max(LAT_N) from station where LAT_N <137.2345);
+```
